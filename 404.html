@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CAS Las Lomas, A.B.P.</title>
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var match = path.match(/^(.*)\/blog\/([^/?#]+)/i);
+        if (match) {
+          var base = match[1] || '';
+          var slug = match[2];
+          window.location.replace(
+            base + '/?articulo=' + encodeURIComponent(decodeURIComponent(slug)) + window.location.hash
+          );
+        } else {
+          window.location.replace('./');
+        }
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
